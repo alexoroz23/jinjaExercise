@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madlib Questions</title>
+</head>
+
+<body>
+  <h1>Madlibs</h1>
+  <form action="/story">
+    <!-- Start of Jinja for loop -->
+    {% for prompt in prompts %}
+      <p>{{ prompt }}:
+        <!-- Create an input field with name as prompt variable -->
+        <input name="{{ prompt }}">
+      </p>
+    {% endfor %}
+    <!-- Create a submit button -->
+    <button>Submit</button>
+  </form>
+</body>
+</html>
